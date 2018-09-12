@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- CSRF Token -->
-    <meta name="csrf-token" content="bxGYOFUJMW8p464Ii9rpQ1Tjn0DIzXiuprN6QFSg">
+    <meta name="csrf-token" content="7CFxq058qzkGOUVyo3j0gfMPKL9F2Reo9tGGkYy3">
 
    
 			<title></title>
@@ -31,6 +31,9 @@
 .navbar-toggle{
 	background-color:rgba(0,0,0,1);
 }
+.header3 .slide-toggle span,.header4 .slide-toggle span{
+	
+}
 .navbar-custom .navbar-nav li a{
 	background-color:rgba(255,255,255,0);
 	color:rgba(0,0,0,1);
@@ -52,7 +55,9 @@
 .sticky-wrapper.is-sticky .navbar-custom .navbar-nav li:hover > a{
 	color:rgba(0,0,0,1);
 }
-
+.header3 .sliding .sliding-menu,.header4 .sliding .sliding-menu{
+	background-color:#eaeaea
+}
 </style>
 	
 			
@@ -88,33 +93,36 @@
 	})
 	</script>
 	</head>
-<body>
+<body class="header1">
 	
 
 
 
-	<div class="navbar  
+	<div class="navbar   
 navbar-custom" 
 role="navigation" >
 	<div class="container">
-		<div class="navbar-header">
-			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-				<span class="sr-only">Toggle navigation</span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</button>
-			<a class="navbar-brand logo" href="index.html">
-								<img src="https://Frezit.github.io/example//uploads/2018/06/images (1)_1246730823.png" class="img-responsive">
-							</a>
+				<div class="row">
+			<div class="col-md-12">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand logo" href="index.html">
+												<img src="https://Frezit.github.io/example//uploads/2018/06/images (1)_1246730823.png" class="img-responsive">
+											</a>
+				</div>
+				<div class="navbar-collapse collapse" id="navbar-menu">
+					<ul class="nav navbar-nav navbar-right">
+						
+					</ul>
+				</div>
+			</div>
 		</div>
-		<div class="navbar-collapse collapse" id="navbar-menu">
-			<ul class="nav navbar-nav navbar-right">
-				
-			</ul>
-
-		</div>
-	</div>
+			</div>
 </div>
 
 
@@ -436,6 +444,25 @@ role="navigation" >
         <!-- Back to top -->    
 <a href="#" class="back-to-top" id="back-to-top"> <i class="fa fa-angle-up"></i> </a>
 
+<script>
+jQuery(document).ready(function(){
+	jQuery('#slide-toggle').click(function(){
+		if(jQuery('#sliding').hasClass('on')){
+			jQuery('#sliding').fadeOut();
+			jQuery('#sliding').removeClass('on');
+		}else{
+			jQuery('#sliding').fadeIn();
+			jQuery('#sliding').addClass('on');
+		}
+		return false;
+	})
+	jQuery('#slide-toggle-close,.sliding-overlay').click(function(){
+			jQuery('#sliding').fadeOut();
+			jQuery('#sliding').removeClass('on');
+		return false;
+	})
+})
+</script>
 
 <!-- js placed at the end of the document so the pages load faster -->
 <script src="https://Frezit.github.io/example//templates/testtheme/js/bootstrap.min.js"></script>
